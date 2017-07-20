@@ -1,0 +1,18 @@
+package r7d2b;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class Examples {
+	IList alist = new Cons(1,new MT());
+	IList list2 = new Cons(1,new MT());
+	
+	@Test
+	public void test() {
+		assertEquals(true,alist.same(list2));
+		assertEquals(false,alist.same(new MT()));
+		assertEquals(false,new MT().same(alist));
+	}
+
+}

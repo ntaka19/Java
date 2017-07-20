@@ -1,0 +1,26 @@
+package r7d2a;
+import idraw.*;
+
+public class ShapeWorld extends World{
+AShape theShape;
+	
+	ShapeWorld(AShape theShape,Canvas theCanvas){
+		super(theCanvas);
+		this.theShape = theShape;
+	}
+	
+	public void onTick() {
+		this.shape.move();
+		return;
+	}
+
+	
+	public World onKeyEvent(String key) {
+		this.shape = this.shape.morph();
+		return;
+	}
+	
+	public boolean draw(){
+		return this.theShape.draw(theCanvas);
+	}
+}

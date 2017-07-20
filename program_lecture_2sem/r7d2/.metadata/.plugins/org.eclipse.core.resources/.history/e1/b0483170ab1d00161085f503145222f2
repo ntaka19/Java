@@ -1,0 +1,35 @@
+package r7d2b;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class FloydExamples {
+	
+	IList alist = new Cons(1,new MT());
+	IList list2 = new Cons(1,new MT());
+	
+	IList I0 = new MT();
+	IList I1 = new Cons(1,I0);
+	IList I2 = new Cons(2,I1);
+	IList I3 = new Cons(3,I2);
+	IList I4 = new Cons(4,I3);
+	
+	IList c1 = new Cons(1,I0);
+	IList c2 = new Cons(2,c1);
+	IList c3 = new Cons(3,c2);
+	IList c4 = new Cons(4,c3);
+	
+	@Test
+	public void testisCycle() {
+		c1.setRest(c3);
+		//c4-c3-c2-c1-c3-c2-c1...
+		assertEquals(true,c3.isCycle());
+		assertEquals(false,I4.isCycle());		
+		assertEquals(false, I0.isCycle());
+		
+		assertEquals(false,I4.hasCycle());
+		
+	}
+
+}

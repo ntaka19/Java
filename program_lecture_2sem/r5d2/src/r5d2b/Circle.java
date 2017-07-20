@@ -1,0 +1,27 @@
+package r5d2b;
+import draw.*;
+import colors.*;
+
+public class Circle extends AShape{
+	
+	int radius;
+    
+	public Circle(CartPt loc, int radius){
+	super(loc);
+	
+	this.radius = radius;
+	}
+	
+	public boolean draw(Canvas c){
+		return c.drawCircle(loc.cartPtToPosn(), this.radius, new Red());
+	}
+
+	public AShape move() {
+		return new Circle(new CartPt(this.loc.x-5, this.loc.y+5),this.radius);
+	}
+
+	public AShape morph() {
+		return new Dot(this.loc);
+	}
+
+}

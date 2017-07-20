@@ -1,0 +1,35 @@
+package r7d2a;
+
+
+import org.junit.Test;
+
+import idraw.*;
+
+/*
+ * 
+ *可変状態にしたクラス：AShape 
+ *作用的な状態のままのクラス：
+ *
+ * 
+ */
+
+
+public class IShapeTest {
+	Canvas c = new Canvas(300, 300);
+    CartPt p = new CartPt(150, 150);
+    CartPt p2 = new CartPt(120,100);
+     
+    AShape squ = new Square(p, 30);
+    AShape cir = new Circle(p, 20);
+    AShape dot = new Dot(p);
+    
+    ShapeWorld w1 = new ShapeWorld(squ,c);
+	
+    @Test
+	public void test() {
+    	/*c.show();
+    	squ.draw(c);*/
+		w1.bigBang(400, 400, 0.1);
+		
+	}
+}

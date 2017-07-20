@@ -1,0 +1,13 @@
+package r7d2a;
+
+abstract class AShape {
+CartPt loc;
+	
+	AShape(CartPt loc){
+		this.loc = loc;
+	}
+	
+ 
+	public abstract AShape move();
+	public abstract AShape morph(); 
+}

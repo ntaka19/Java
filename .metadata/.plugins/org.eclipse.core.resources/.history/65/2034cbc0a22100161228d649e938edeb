@@ -1,0 +1,10 @@
+package diffLists;
+
+public class PhoneBookEntry {
+	String name;
+	PhoneNumber phoneNumeber;
+	
+	boolean lessThan(PhoneBookEntry that){
+		return 0 > this.name.compareTo(that.name);
+	}
+}

@@ -1,0 +1,9 @@
+
+public class AContainer {
+	Object content;
+	
+	AContainer(Object content){
+		this.content = content;
+	}
+	
+}

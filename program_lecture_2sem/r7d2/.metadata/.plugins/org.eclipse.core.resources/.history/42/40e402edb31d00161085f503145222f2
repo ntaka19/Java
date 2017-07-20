@@ -1,0 +1,70 @@
+package r7d2b;
+
+//整数のリストを定義する
+public class Cons implements IList {
+	private int fst;
+	private IList rst;
+	
+	
+	public Cons(int fst, IList rst) {
+		this.fst = fst;
+		this.rst = rst;
+	}
+	
+	//setRestで循環の作成
+	public void setRest(IList rst){
+		this.rst = rst;
+	}
+	
+	//リストの値同値
+	public boolean same(IList that){
+		return that instanceof Cons //式の値がその型のインスタンスであればtrue
+				&& this.fst == that.first()
+				&& this.rest().same(that.rest());//残りも要素のfst値を比較している
+	}
+	
+	public int first(){
+		return this.fst;
+	}
+	public IList rest(){
+		return this.rst;
+		}
+	
+	public boolean sameWithInitial(int initial){
+		return initial == this.rst.first() || rst.sameWithInitial(initial);
+	}
+	
+	public boolean isCycle(){
+		/*リストの途中から循環している場合止まらない。
+		 * stack overflow について考慮されていない。
+		 */
+		int initial = this.first();
+		return this.sameWithInitial(initial);
+	}
+
+	public boolean hasCycle() {
+		
+		/*この実装だと、実質stack overflow でエラーになれば、サイクルが存在していることを仮定している*/
+		try {
+			return this.first() == this.rest().first()
+					|| this.rest().first() == this.rest()..first()
+					|| rst.hasCycle();
+					
+		}
+		catch (StackOverflowError error){
+			return true;
+		}
+		catch (RuntimeException error){
+			return false;
+		}
+		/*
+		if( this.first() == this.rest().first() 
+				||this.first() == this.rest().rest().first()) return true;
+		else if(this.rest() instanceof MT) return false;
+		else rst.hasCycle();
+		return false;*/
+	}
+}
+
+
+

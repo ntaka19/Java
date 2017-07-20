@@ -1,0 +1,17 @@
+class CandyBox extends ABox {
+
+  CandyBox(Candy content) {
+    super(content);
+  }
+  //to take content out
+  Candy get() {
+    return (Candy) content;
+  }
+  
+  //to swap the content in this box with the one in that box
+  void swap(CandyBox that) {
+    Candy c = (Candy) this.content;
+    this.content = that.content;
+    that.content = c;
+  }
+}

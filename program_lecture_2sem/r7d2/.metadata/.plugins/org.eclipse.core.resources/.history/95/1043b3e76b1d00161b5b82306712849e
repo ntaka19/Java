@@ -1,0 +1,23 @@
+package r7d2a;
+
+public class Dot extends AShape {
+	Dot(CartPt loc){
+        super(loc);
+    }
+    public boolean draw(Canvas c){
+    c.drawDisk(this.loc.cartPtToPosn(), 1, new Red());
+    return;;
+    }
+	@Override
+	//目的：下に５だけ動かす
+	public void move() {
+		this.loc.x = loc.x;
+		this.loc.y = loc.y-5;
+		return;
+	}
+	@Override
+	public AShape morph() {
+		return new Circle(this.loc, 4);
+	}
+
+}

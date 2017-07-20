@@ -1,0 +1,14 @@
+package r7d2a;
+import geometry.Posn;
+
+public class CartPt extends Posn{
+	
+	public CartPt(int x, int y) {
+		super(x,y);
+	}
+	public Posn cartToPosn(){
+		return new Posn(this.x,this.y); //ここ変更か？
+	}
+	
+	
+}

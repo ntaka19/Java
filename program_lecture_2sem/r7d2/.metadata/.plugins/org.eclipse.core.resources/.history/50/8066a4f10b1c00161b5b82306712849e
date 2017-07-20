@@ -1,0 +1,5 @@
+package r7d2b;
+
+public class MT implements IList {
+	MT(){};
+}

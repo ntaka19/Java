@@ -1,0 +1,63 @@
+package r7d2b;
+
+//整数のリストを定義する
+public class Cons implements IList {
+	private int fst;
+	private IList rst;
+	private int initial = this.fst;
+	
+	public Cons(int fst, IList rst) {
+		this.fst = fst;
+		this.rst = rst;
+	}
+	
+	//setRestで循環の作成
+	public void setRest(IList rst){
+		this.rst = rst;
+	}
+	
+	//リストの値同値
+	public boolean same(IList that){
+		return that instanceof Cons //式の値がその型のインスタンスであればtrue
+				&& this.fst == that.first()
+				&& this.rest().same(that.rest());//残りも要素のfst値を比較している
+	}
+	
+	public int first(){
+		return this.fst;
+	}
+	public IList rest(){
+		return this.rst;
+		}
+	
+	/*public boolean isCycle(){
+		//リストの途中から循環している場合止まらない。
+		if(initial == this.rst.first()) return true;
+		else this.rst.isCycle();
+	}*/
+	
+	public same1(int that){
+		return that == this.rest().first() || this.same1(that);
+	}
+	public boolean isCycle(){
+		int initial = this.first();
+		return same1(initial);
+	}
+	
+
+	public boolean hasCycle() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	
+	
+	/*public boolean hasCycle(){
+		return this.fst == this.rst.first()  
+				|| this.get == this.get()
+				|| this.rst.hasCycle();
+	
+	}*/
+}
+
+
+

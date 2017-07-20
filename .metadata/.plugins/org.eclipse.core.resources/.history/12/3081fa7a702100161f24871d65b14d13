@@ -1,0 +1,11 @@
+
+public class ABox {
+	Object content;
+	
+	ABox(Object content){
+		this.content = content;
+	}
+	
+	
+}
+

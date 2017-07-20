@@ -1,0 +1,43 @@
+package r7d2b;
+
+public class MT implements IList {
+
+	public void setRest(IList rst) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public boolean same(IList that) {
+		//MTと型が一致していたらtrueを返す。
+		return that instanceof MT;
+	}
+
+	public int first() {
+		// TODO Auto-generated method stub
+		return -1;
+	}
+
+	public IList rest() {
+		// TODO Auto-generated method stub
+		throw new RuntimeException("empty");
+	}
+	
+	//空のリストの場合、サイクルが生じているかどうかわからないため、例外にする？
+	public boolean isCycle() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean hasCycle() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean sameWithInitial(int initial) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	
+
+}

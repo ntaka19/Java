@@ -1,0 +1,18 @@
+class CandyBox {
+  Candy content;
+
+  CandyBox(Candy content) {
+    this.content = content;
+  }
+  //to take content out
+  Candy get() {
+    return content;
+  }
+  
+  //to swap the content in this box with the one in that box
+  void swap(CandyBox that) {
+    Candy c = this.content;
+    this.content = that.content;
+    that.content = c;
+  }
+}

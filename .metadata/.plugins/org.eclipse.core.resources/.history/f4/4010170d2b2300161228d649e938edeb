@@ -1,0 +1,18 @@
+
+public class AContainer<VALUE> {
+	VALUE content;
+	
+	AContainer(VALUE content){
+		this.content = content;
+	}
+	
+	VALUE get(){
+		return content; //このままだと、objectを返すことになる。objectにはcolorが定義されていない。
+	}
+	
+	void swap(AContainer<VALUE> that){
+		VALUE c = this.content;
+		this.content = that.content;
+		that.content = c;
+	}
+}

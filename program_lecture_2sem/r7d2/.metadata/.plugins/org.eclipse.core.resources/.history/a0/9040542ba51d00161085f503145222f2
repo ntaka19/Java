@@ -1,0 +1,40 @@
+package r7d2a;
+
+
+import org.junit.Test;
+
+import idraw.*;
+
+/*
+ * 
+ *可変状態にしたクラス：AShape,Square,Circle,Dot,CartPt
+ *AShapeを始めとした図形はmove,drawの意味で命令的である。現実世界における状態の変化をそのまま表せているのでわかりやすい。
+ *また、いちいち、同じ値のcartPt,radius,sizeなどを作る必要性がないため、メモリの消費量が抑えられる。
+ *
+ *作用的な状態のままのクラス：
+ *colorはnewしている。color内に特定の変数が作れないため。
+ *
+ *各図形に対して定義されているmorphは作用的である。なぜなら図形のタイプを変えるにあたって、参照できるものがないから。
+ * 
+ */
+
+
+public class IShapeTest {
+	Canvas c = new Canvas(300, 300);
+    CartPt p = new CartPt(150, 150);
+    CartPt p2 = new CartPt(120,100);
+     
+    AShape squ = new Square(p, 30);
+    AShape cir = new Circle(p, 20);
+    AShape dot = new Dot(p);
+    
+    ShapeWorld w1 = new ShapeWorld(squ,c);
+	
+    @Test
+	public void test() {
+    	/*c.show();
+    	squ.draw(c);*/
+		w1.bigBang(400, 400, 0.1);
+		
+	}
+}

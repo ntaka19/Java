@@ -1,0 +1,12 @@
+package r7d2a;
+
+public class CartPt {
+	int x;
+	int y;
+	public CartPt(int x, int y) {
+		
+		this.x = x;
+		this.y = y;
+	}
+	
+}

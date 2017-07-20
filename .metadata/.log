@@ -1,0 +1,277 @@
+!SESSION 2016-05-02 23:38:15.018 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ja_JP
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.osgi 4 0 2016-05-02 23:40:04.603
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.lang.RuntimeException: /home/naru/.eclipse/org.eclipse.platform_3.8_155965261/configuration/org.eclipse.osgi/.lazy.2 (そのようなファイルやディレクトリはありません)
+	at org.eclipse.osgi.internal.resolver.BundleDescriptionImpl.loadLazyData(BundleDescriptionImpl.java:665)
+	at org.eclipse.osgi.internal.resolver.BundleDescriptionImpl.getResolvedGenericRequires(BundleDescriptionImpl.java:253)
+	at org.eclipse.osgi.internal.resolver.StateHelperImpl.buildReferences(StateHelperImpl.java:351)
+	at org.eclipse.osgi.internal.resolver.StateHelperImpl.sortBundles(StateHelperImpl.java:305)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.sortByDependencies(StartLevelManager.java:524)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.sortByDependency(StartLevelManager.java:496)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.getInstalledBundles(StartLevelManager.java:481)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:251)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: java.io.FileNotFoundException: /home/naru/.eclipse/org.eclipse.platform_3.8_155965261/configuration/org.eclipse.osgi/.lazy.2 (そのようなファイルやディレクトリはありません)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.eclipse.osgi.framework.util.SecureAction.getFileInputStream(SecureAction.java:123)
+	at org.eclipse.osgi.internal.resolver.StateReader.openLazyFile(StateReader.java:778)
+	at org.eclipse.osgi.internal.resolver.StateReader.fullyLoad(StateReader.java:816)
+	at org.eclipse.osgi.internal.resolver.BundleDescriptionImpl.loadLazyData(BundleDescriptionImpl.java:662)
+	... 21 more
+
+!ENTRY org.eclipse.osgi 4 0 2016-05-02 23:40:04.613
+!MESSAGE Shutdown error
+!STACK 1
+java.lang.RuntimeException: /home/naru/.eclipse/org.eclipse.platform_3.8_155965261/configuration/org.eclipse.osgi/.lazy.2 (そのようなファイルやディレクトリはありません)
+	at org.eclipse.osgi.internal.resolver.BundleDescriptionImpl.loadLazyData(BundleDescriptionImpl.java:665)
+	at org.eclipse.osgi.internal.resolver.BundleDescriptionImpl.getResolvedGenericRequires(BundleDescriptionImpl.java:253)
+	at org.eclipse.osgi.internal.resolver.StateHelperImpl.buildReferences(StateHelperImpl.java:351)
+	at org.eclipse.osgi.internal.resolver.StateHelperImpl.sortBundles(StateHelperImpl.java:305)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.sortByDependencies(StartLevelManager.java:524)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.sortByDependency(StartLevelManager.java:496)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.getInstalledBundles(StartLevelManager.java:481)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:251)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.shutdown(StartLevelManager.java:215)
+	at org.eclipse.osgi.framework.internal.core.InternalSystemBundle.suspend(InternalSystemBundle.java:284)
+	at org.eclipse.osgi.framework.internal.core.Framework.shutdown(Framework.java:692)
+	at org.eclipse.osgi.framework.internal.core.Framework.close(Framework.java:600)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.shutdown(EclipseStarter.java:399)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:199)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+Caused by: java.io.FileNotFoundException: /home/naru/.eclipse/org.eclipse.platform_3.8_155965261/configuration/org.eclipse.osgi/.lazy.2 (そのようなファイルやディレクトリはありません)
+	at java.io.FileInputStream.open0(Native Method)
+	at java.io.FileInputStream.open(FileInputStream.java:195)
+	at java.io.FileInputStream.<init>(FileInputStream.java:138)
+	at org.eclipse.osgi.framework.util.SecureAction.getFileInputStream(SecureAction.java:123)
+	at org.eclipse.osgi.internal.resolver.StateReader.openLazyFile(StateReader.java:778)
+	at org.eclipse.osgi.internal.resolver.StateReader.fullyLoad(StateReader.java:816)
+	at org.eclipse.osgi.internal.resolver.BundleDescriptionImpl.loadLazyData(BundleDescriptionImpl.java:662)
+	... 21 more
+!SESSION 2016-05-03 05:33:43.536 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ja_JP
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.pde.ui 4 0 2016-05-05 08:29:23.829
+!MESSAGE No activeWorkbenchWindow found while executing org.eclipse.pde.ui.searchTargetRepositories
+!STACK 0
+org.eclipse.core.commands.ExecutionException: No activeWorkbenchWindow found while executing org.eclipse.pde.ui.searchTargetRepositories
+	at org.eclipse.ui.handlers.HandlerUtil.noVariableFound(HandlerUtil.java:41)
+	at org.eclipse.ui.handlers.HandlerUtil.getVariableChecked(HandlerUtil.java:90)
+	at org.eclipse.ui.handlers.HandlerUtil.getActiveWorkbenchWindowChecked(HandlerUtil.java:211)
+	at org.eclipse.pde.internal.ui.search.dialogs.TargetRepositorySearchHandler.execute(TargetRepositorySearchHandler.java:40)
+	at org.eclipse.ui.internal.handlers.HandlerProxy.execute(HandlerProxy.java:290)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:499)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.pde.internal.ui.correction.java.SearchRepositoriesForIUProposal.apply(SearchRepositoriesForIUProposal.java:46)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.apply(AbstractAnnotationHover.java:538)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl.access$2(AbstractAnnotationHover.java:515)
+	at org.eclipse.jdt.internal.ui.text.java.hover.AbstractAnnotationHover$AnnotationInformationControl$5.widgetSelected(AbstractAnnotationHover.java:509)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:248)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1276)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1300)
+	at org.eclipse.swt.widgets.Widget.sendSelectionEvent(Widget.java:1414)
+	at org.eclipse.swt.widgets.Link.gtk_button_release_event(Link.java:339)
+	at org.eclipse.swt.widgets.Widget.windowProc(Widget.java:1762)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:5116)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4377)
+	at org.eclipse.swt.internal.gtk.OS._gtk_main_do_event(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.gtk_main_do_event(OS.java:8317)
+	at org.eclipse.swt.widgets.Display.eventProc(Display.java:1193)
+	at org.eclipse.swt.internal.gtk.OS._g_main_context_iteration(Native Method)
+	at org.eclipse.swt.internal.gtk.OS.g_main_context_iteration(OS.java:2342)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3184)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!SESSION 2016-05-09 09:02:06.595 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ja_JP
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-05-09 09:02:17.122
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 4 567 2016-05-09 09:02:17.200
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2016-05-09 09:02:17.200
+!MESSAGE Could not read metadata for 'r4d2'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'r4d2' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:851)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:874)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:854)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:703)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2502)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:300)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2016-05-09 09:02:17.201
+!MESSAGE The project description file (.project) for 'r4d2' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SESSION 2016-05-09 09:04:58.963 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ja_JP
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-05-09 09:05:05.461
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 4 567 2016-05-09 09:05:05.495
+!MESSAGE Workspace restored, but some problems occurred.
+!SUBENTRY 1 org.eclipse.core.resources 4 567 2016-05-09 09:05:05.495
+!MESSAGE Could not read metadata for 'r4d2'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: The project description file (.project) for 'r4d2' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.read(FileSystemResourceManager.java:851)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:874)
+	at org.eclipse.core.internal.resources.SaveManager.restoreMetaInfo(SaveManager.java:854)
+	at org.eclipse.core.internal.resources.SaveManager.restore(SaveManager.java:703)
+	at org.eclipse.core.internal.resources.SaveManager.startup(SaveManager.java:1528)
+	at org.eclipse.core.internal.resources.Workspace.startup(Workspace.java:2502)
+	at org.eclipse.core.internal.resources.Workspace.open(Workspace.java:2251)
+	at org.eclipse.core.resources.ResourcesPlugin.start(ResourcesPlugin.java:439)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl$1.run(BundleContextImpl.java:711)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.startActivator(BundleContextImpl.java:702)
+	at org.eclipse.osgi.framework.internal.core.BundleContextImpl.start(BundleContextImpl.java:683)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:381)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.start(AbstractBundle.java:300)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:440)
+	at org.eclipse.osgi.internal.loader.BundleLoader.setLazyTrigger(BundleLoader.java:263)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:469)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.SingleSourcePackage.loadClass(SingleSourcePackage.java:35)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:461)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:125)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!SUBENTRY 2 org.eclipse.core.resources 4 567 2016-05-09 09:05:05.496
+!MESSAGE The project description file (.project) for 'r4d2' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.core.resources 4 567 2016-05-09 09:05:11.326
+!MESSAGE The project description file (.project) for 'r4d2' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+!SESSION 2016-05-10 13:46:49.373 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ja_JP
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-05-11 09:42:09.434
+!MESSAGE Invalid ZIP archive: src/DateExamples.java [in r6d1]
+
+!ENTRY org.eclipse.jdt.core 4 0 2016-05-12 08:44:33.328
+!MESSAGE Invalid ZIP archive: src/r6d2a/BookTest.java [in r6d2]
+!SESSION 2016-05-24 20:21:37.595 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_92
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=ja_JP
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2016-05-24 20:21:48.033
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

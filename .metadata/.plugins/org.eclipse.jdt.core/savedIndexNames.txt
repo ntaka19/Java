@@ -1,0 +1,10 @@
+INDEX VERSION 1.126+/home/naru/documents/programming/javaprogram/.metadata/.plugins/org.eclipse.jdt.core
+3154331115.index
+2814078164.index
+1791611979.index
+3404102870.index
+3381942249.index
+1051868526.index
+875303012.index
+2904900062.index
+2942566279.index
